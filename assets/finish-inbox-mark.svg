@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">FinishInbox mark</title>
+  <desc id="desc">A dark menu bar pill with a green completion check.</desc>
+  <rect width="512" height="512" rx="112" fill="#111827"/>
+  <rect x="74" y="174" width="364" height="164" rx="82" fill="#F8FAFC"/>
+  <circle cx="161" cy="256" r="42" fill="#22C55E"/>
+  <path d="M141 256l14 14 28-31" fill="none" stroke="#052E16" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="226" y="228" width="142" height="20" rx="10" fill="#334155"/>
+  <rect x="226" y="266" width="96" height="20" rx="10" fill="#94A3B8"/>
+</svg>

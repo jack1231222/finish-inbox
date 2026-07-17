@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">FinishInbox</title>
+  <desc id="desc">A macOS menu bar inbox for finished coding-agent tasks.</desc>
+  <rect width="1280" height="640" fill="#0B1020"/>
+  <circle cx="1110" cy="70" r="270" fill="#12372A" opacity="0.58"/>
+  <circle cx="80" cy="620" r="260" fill="#172554" opacity="0.46"/>
+  <g transform="translate(96 104)">
+    <rect width="116" height="116" rx="28" fill="#F8FAFC"/>
+    <circle cx="41" cy="58" r="20" fill="#22C55E"/>
+    <path d="M31 58l7 7 14-16" fill="none" stroke="#052E16" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="70" y="46" width="28" height="9" rx="4.5" fill="#334155"/>
+    <rect x="70" y="65" width="20" height="9" rx="4.5" fill="#94A3B8"/>
+  </g>
+  <text x="244" y="181" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="72" font-weight="700">FinishInbox</text>
+  <text x="98" y="306" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="34">Finished coding-agent tasks stay visible</text>
+  <text x="98" y="352" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="34">until you mark them read.</text>
+  <g transform="translate(98 430)">
+    <rect width="438" height="92" rx="46" fill="#F8FAFC"/>
+    <text x="42" y="59" fill="#111827" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="30" font-weight="600">Client App · 2 done</text>
+    <text x="373" y="60" fill="#16A34A" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="34" font-weight="700">✓</text>
+  </g>
+  <text x="730" y="482" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="24">LOCAL ONLY</text>
+  <text x="730" y="524" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="24">NO PROMPT SCANNING</text>
+  <text x="730" y="566" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="24">PERSISTENT UNREAD COUNTS</text>
+</svg>

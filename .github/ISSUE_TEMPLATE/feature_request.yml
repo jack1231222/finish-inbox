@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest a focused improvement that preserves FinishInbox's local privacy boundary.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the user need without private project details.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Privacy and local-only impact
+      description: Explain any new data read, stored, displayed, or exported.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary check
+      options:
+        - label: This request does not require collecting prompts, responses, source content, credentials, or full session logs.
+          required: true

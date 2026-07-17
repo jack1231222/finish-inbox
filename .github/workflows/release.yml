@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate tag version
+        id: version
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+([-.][0-9A-Za-z.-]+)?$ ]]; then
+            echo "Tag must use v<semver>." >&2
+            exit 1
+          fi
+          echo "value=$version" >> "$GITHUB_OUTPUT"
+      - name: Run tests
+        run: swift test
+      - name: Run isolated CLI integration stress
+        run: python3 -u scripts/integration-stress.py
+      - name: Check README image references
+        run: scripts/check-readme-assets.sh
+      - name: Scan source and resources for private strings
+        run: scripts/privacy-scan.sh Sources Resources README.md README.zh-CN.md docs scripts .github
+      - name: Build release artifacts
+        run: scripts/package-release.sh '${{ steps.version.outputs.value }}'
+      - name: Verify real app launch across two state roots
+        run: python3 -u scripts/app-launch-smoke.py
+      - name: Upload GitHub release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          test -f "docs/releases/v$VERSION.md"
+          gh release create "$GITHUB_REF_NAME" \
+            "dist/FinishInbox-v$VERSION.zip" \
+            "dist/FinishInbox-v$VERSION.zip.sha256" \
+            "dist/FinishInbox-v$VERSION.manifest.json" \
+            --verify-tag \
+            --prerelease \
+            --notes-file "docs/releases/v$VERSION.md" \
+            --title "FinishInbox $VERSION"

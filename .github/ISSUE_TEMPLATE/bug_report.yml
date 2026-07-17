@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a reproducible FinishInbox problem without sharing private content.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include prompts, agent responses, source contents, API keys, full logs, or private paths.
+  - type: input
+    id: version
+    attributes:
+      label: FinishInbox version
+      placeholder: 0.1.0-preview.1
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and architecture
+      placeholder: macOS 14.5, Apple Silicon
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use redacted labels and paths.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed prompts, responses, source content, credentials, full logs, and private paths.
+          required: true

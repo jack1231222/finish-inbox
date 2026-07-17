@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: swift test
+      - name: Run isolated CLI integration stress
+        run: python3 -u scripts/integration-stress.py
+      - name: Check README image references
+        run: scripts/check-readme-assets.sh
+      - name: Scan source and resources for private strings
+        run: scripts/privacy-scan.sh Sources Resources README.md README.zh-CN.md docs scripts .github
+      - name: Build and verify app bundle
+        run: scripts/build-app.sh 0.1.0-preview.1
+      - name: Verify real app launch across two state roots
+        run: python3 -u scripts/app-launch-smoke.py
+      - name: Scan release binary for private strings
+        run: scripts/privacy-scan.sh .build/release-app/FinishInbox.app .build/release-app/finish-inbox

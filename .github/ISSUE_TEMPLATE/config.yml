@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/jack1231222/finish-inbox/security/advisories/new
+    about: Report vulnerabilities privately. Do not post secrets, prompts, logs, or private paths in an issue.
