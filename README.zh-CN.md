@@ -122,6 +122,15 @@ finish-inbox doctor             检查安装和文件权限
 finish-inbox preview            只预览文案，不改状态
 ```
 
+## 意见反馈与版本升级
+
+- [功能想法和接入需求](https://github.com/jack1231222/finish-inbox/discussions/1)：可以评论、补充和投票；
+- [安装与使用问题](https://github.com/jack1231222/finish-inbox/discussions/categories/q-a)：放到 Q&A；
+- [能够复现的 Bug](https://github.com/jack1231222/finish-inbox/issues/new?template=bug_report.yml)：进入 Issue 跟踪；
+- 安全问题通过[私密漏洞表单](https://github.com/jack1231222/finish-inbox/security/advisories/new)提交。
+
+反馈如何进入后续版本，见[反馈与升级流程](docs/FEEDBACK.zh-CN.md)。
+
 ## 开发验证
 
 ```bash

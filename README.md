@@ -140,6 +140,19 @@ finish-inbox preview           Print a label without changing state
 
 Run `finish-inbox help` for the exact options in your installed version.
 
+## Feedback and upgrades
+
+- [Ideas and integration requests](https://github.com/jack1231222/finish-inbox/discussions/1)
+  stay open for comments and voting.
+- [Questions and setup help](https://github.com/jack1231222/finish-inbox/discussions/categories/q-a)
+  belong in Q&A.
+- [Reproducible bugs](https://github.com/jack1231222/finish-inbox/issues/new?template=bug_report.yml)
+  become tracked issues.
+- Security reports use the [private advisory form](https://github.com/jack1231222/finish-inbox/security/advisories/new).
+
+See how feedback becomes a tested release in the
+[feedback and upgrade loop](docs/FEEDBACK.md).
+
 ## Build and test
 
 ```bash

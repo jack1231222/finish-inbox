@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Ideas, integrations, and feedback
+    url: https://github.com/jack1231222/finish-inbox/discussions/1
+    about: Suggest an integration, describe a workflow, or vote on what should improve next.
+  - name: Questions and setup help
+    url: https://github.com/jack1231222/finish-inbox/discussions/categories/q-a
+    about: Ask for help without opening a bug report.
   - name: Security report
     url: https://github.com/jack1231222/finish-inbox/security/advisories/new
     about: Report vulnerabilities privately. Do not post secrets, prompts, logs, or private paths in an issue.

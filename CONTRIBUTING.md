@@ -4,6 +4,10 @@ FinishInbox is intentionally small. Before adding a feature, explain which
 missed completion or review workflow it fixes and why the change does not
 require reading private task content.
 
+Start early ideas in the [feedback discussion](https://github.com/jack1231222/finish-inbox/discussions/1).
+Use an issue once the behavior is reproducible and the scope is concrete. The
+full routing and release process is in [docs/FEEDBACK.md](docs/FEEDBACK.md).
+
 ## Development
 
 ```bash
