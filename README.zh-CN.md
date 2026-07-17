@@ -14,6 +14,9 @@ Codex、Claude Code 或本地脚本明确上报完成事件后，FinishInbox 会
 
 它不扫提示词，不读回复，也不联网。
 
+如果这个小工具也解决了你的问题，点一个 Star，能让更多 Agent 用户看到它。
+想接入别的工具，可以到 [Ideas 讨论](https://github.com/jack1231222/finish-inbox/discussions/1) 留言。
+
 [English](README.md)
 
 ## 它解决什么问题

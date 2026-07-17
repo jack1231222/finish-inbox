@@ -20,6 +20,10 @@ Client App · 2 done ✓
 
 No prompt scanning. No response history. No cloud service.
 
+If FinishInbox solves this problem for you, a star helps more coding-agent
+users find it. Have an integration request? [Tell me what should come
+next](https://github.com/jack1231222/finish-inbox/discussions/1).
+
 [简体中文](README.zh-CN.md)
 
 ## Why this exists
