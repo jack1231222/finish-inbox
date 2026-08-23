@@ -58,8 +58,8 @@ final class CompletionManager: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private func reconcileStatusItems() {
         guard !headless else { return }
         let active = state.counts.filter { $0.value > 0 }
-        let projects = active.keys.sorted()
-        let visibleProjects = Set(projects.prefix(6))
+        let groups = MenuBarProjectGroups(state: state)
+        let visibleProjects = Set(groups.visible)
 
         for project in Array(projectItems.keys) where !visibleProjects.contains(project) {
             if let item = projectItems.removeValue(forKey: project) {
@@ -67,7 +67,7 @@ final class CompletionManager: NSObject, NSApplicationDelegate, NSMenuDelegate {
             }
         }
 
-        for project in visibleProjects.sorted() {
+        for project in groups.visible {
             let item = projectItems[project] ?? NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
             guard let button = item.button, let count = active[project] else { continue }
             button.title = DisplayFormatting.menuBarLabel(project: project, count: count)
@@ -80,7 +80,7 @@ final class CompletionManager: NSObject, NSApplicationDelegate, NSMenuDelegate {
             projectItems[project] = item
         }
 
-        let overflowProjects = Array(projects.dropFirst(6))
+        let overflowProjects = groups.overflow
         if overflowProjects.isEmpty {
             if let overflowItem {
                 NSStatusBar.system.removeStatusItem(overflowItem)

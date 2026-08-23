@@ -44,6 +44,34 @@ struct FinishInboxCoreTests {
         #expect(DisplayFormatting.menuBarLabel(project: "abcdefghijklmn", count: 1) == "abcdefghijkl… · 1 done ✓")
     }
 
+    @Test("menu bar projection sorts active projects and isolates overflow")
+    func menuBarProjectGroups() {
+        let state = ReminderState(counts: [
+            "G": 1,
+            "A": 1,
+            "F": 1,
+            "zero": 0,
+            "C": 2,
+            "B": 1,
+            "E": 1,
+            "D": 1,
+        ])
+
+        let groups = MenuBarProjectGroups(state: state)
+
+        #expect(groups.visible == ["A", "B", "C", "D", "E", "F"])
+        #expect(groups.overflow == ["G"])
+    }
+
+    @Test("menu bar projection honors a bounded visible limit")
+    func menuBarProjectGroupsWithCustomLimit() {
+        let state = ReminderState(counts: ["A": 1, "B": 1, "C": 1])
+
+        #expect(MenuBarProjectGroups(state: state, visibleLimit: 2).visible == ["A", "B"])
+        #expect(MenuBarProjectGroups(state: state, visibleLimit: 2).overflow == ["C"])
+        #expect(MenuBarProjectGroups(state: state, visibleLimit: -1).visible.isEmpty)
+    }
+
     @Test("implicit project resolution fails closed")
     func missingMapping() throws {
         let (base, _, service) = try fixture()

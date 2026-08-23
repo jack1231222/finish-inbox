@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify Launch Services starts independent managers for independent state roots."""
+"""Verify app launch and project-isolated clear behavior across state roots."""
 
 from __future__ import annotations
 
@@ -56,6 +56,38 @@ def state_root(home: Path) -> Path:
     return home / "Library" / "Application Support" / "FinishInbox"
 
 
+def state_count_matches(state: object, project: str, expected: int) -> bool:
+    """Match a persisted count only when the state has a valid counts object."""
+    if not isinstance(state, dict):
+        return False
+    counts = state.get("counts")
+    if not isinstance(counts, dict):
+        return False
+    if expected == 0:
+        return counts.get(project, 0) == 0
+    return counts.get(project) == expected
+
+
+def validate_state_count_matches() -> None:
+    """Keep malformed JSON state from satisfying a zero-count wait."""
+    require(
+        state_count_matches({"counts": {"Launch A": 1}}, "Launch A", 1),
+        "state count matcher rejected a persisted positive count",
+    )
+    require(
+        state_count_matches({"counts": {}}, "Launch A", 0),
+        "state count matcher rejected a cleared project",
+    )
+    require(
+        not state_count_matches({"schemaVersion": 1}, "Launch A", 0),
+        "state count matcher accepted a state without counts",
+    )
+    require(
+        not state_count_matches({"counts": None}, "Launch A", 0),
+        "state count matcher accepted a non-object counts payload",
+    )
+
+
 def wait_for_count(home: Path, project: str, expected: int, timeout: float = 30) -> None:
     state_file = state_root(home) / "state.json"
     deadline = time.monotonic() + timeout
@@ -66,7 +98,7 @@ def wait_for_count(home: Path, project: str, expected: int, timeout: float = 30)
             except (OSError, json.JSONDecodeError):
                 pass
             else:
-                if state.get("counts", {}).get(project) == expected:
+                if state_count_matches(state, project, expected):
                     return
         time.sleep(0.1)
     raise RuntimeError(f"manager did not persist {project}={expected}")
@@ -120,6 +152,7 @@ def main() -> None:
     parser.add_argument("--app", type=Path, default=DEFAULT_APP)
     parser.add_argument("--cli", type=Path, default=DEFAULT_CLI)
     arguments = parser.parse_args()
+    validate_state_count_matches()
     app = arguments.app.expanduser().resolve()
     cli = arguments.cli.expanduser().resolve()
     require(app.is_dir(), f"app bundle not found: {app}")
@@ -180,12 +213,18 @@ def main() -> None:
                 len(finish_inbox_pids() - existing_processes) == 2,
                 "expected exactly two persistent app managers for two state roots",
             )
+            run(cli, environments[0], "clear", labels[0])
+            wait_for_count(homes[0], labels[0], 0)
+            wait_for_count(homes[1], labels[1], 1)
+            wait_for_lock(homes[0])
+            wait_for_lock(homes[1])
             print(
                 json.dumps(
                     {
                         "managers": 2,
                         "stateRoots": 2,
-                        "counts": {labels[0]: 2, labels[1]: 1},
+                        "counts": {labels[0]: 0, labels[1]: 1},
+                        "clearIsolation": "passed",
                     },
                     indent=2,
                     sort_keys=True,
