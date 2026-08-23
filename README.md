@@ -165,7 +165,12 @@ swift test
 
 The core test suite covers mapping resolution, input validation, private file
 permissions, durable event ordering, idempotency, corrupt-state handling,
-bounded history, project isolation, and restart recovery.
+bounded history, project isolation, restart recovery, and the deterministic
+menu-bar visible/overflow projection. The app-launch smoke test additionally
+exercises real manager processes, single-manager locks, and project-isolated
+clearing across two independent state roots. It does not replace the release
+check for clearing projects through the same manager's real AppKit status-item
+click path.
 
 See [architecture](docs/ARCHITECTURE.md) and the explicit
 [state invariants](docs/PRODUCT_SPEC.md). Common recovery steps are in

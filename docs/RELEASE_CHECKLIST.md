@@ -38,15 +38,18 @@ archive, installed app, and public metadata all agree.
 - [ ] Map a project and confirm an unmapped project fails without revealing its
       directory basename.
 - [ ] Emit one event, a duplicate ID, and concurrent events for two projects.
-- [ ] Confirm restart preserves counts and clear affects only one project.
+- [ ] Confirm restart preserves counts and service/state-layer clear affects only
+      one project.
 - [ ] Confirm corrupt state is preserved and not overwritten as empty.
 - [ ] Confirm config, events, state, locks, and quarantine are `0600`, and their
       directories are `0700`.
 - [ ] Launch the real App bundle, inspect the real menu bar label, click it, and
       verify the matching count disappears.
 - [ ] `scripts/app-launch-smoke.py` proves two state roots keep two independent
-      Launch Services managers while duplicate launches preserve single-manager
-      locking per root.
+      Launch Services managers, duplicate launches preserve single-manager
+      locking per root, and clearing one project in one root leaves the other
+      root's project unchanged. This does not replace the same-manager
+      status-item click check above.
 - [ ] Run uninstall once while retaining data and once in an isolated home with
       `--purge`; both are idempotent.
 

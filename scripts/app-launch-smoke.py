@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify Launch Services starts independent managers for independent state roots."""
+"""Verify app launch and project-isolated clear behavior across state roots."""
 
 from __future__ import annotations
 
@@ -66,7 +66,7 @@ def wait_for_count(home: Path, project: str, expected: int, timeout: float = 30)
             except (OSError, json.JSONDecodeError):
                 pass
             else:
-                if state.get("counts", {}).get(project) == expected:
+                if state.get("counts", {}).get(project, 0) == expected:
                     return
         time.sleep(0.1)
     raise RuntimeError(f"manager did not persist {project}={expected}")
@@ -180,12 +180,18 @@ def main() -> None:
                 len(finish_inbox_pids() - existing_processes) == 2,
                 "expected exactly two persistent app managers for two state roots",
             )
+            run(cli, environments[0], "clear", labels[0])
+            wait_for_count(homes[0], labels[0], 0)
+            wait_for_count(homes[1], labels[1], 1)
+            wait_for_lock(homes[0])
+            wait_for_lock(homes[1])
             print(
                 json.dumps(
                     {
                         "managers": 2,
                         "stateRoots": 2,
-                        "counts": {labels[0]: 2, labels[1]: 1},
+                        "counts": {labels[0]: 0, labels[1]: 1},
+                        "clearIsolation": "passed",
                     },
                     indent=2,
                     sort_keys=True,
