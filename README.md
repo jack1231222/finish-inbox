@@ -2,13 +2,15 @@
 
 Keep completed Codex tasks and conversations awaiting your reply in the macOS menu bar.
 
-## [Download the free notarized app for macOS](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip)
+## [Download the free notarized app for macOS](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.1-free-preview.1/FinishInbox-Free-0.2.1-English-notarized-macos.zip)
 
-**Apple notarized · Free to use · No subscription · No build tools or Python required**
+**English-only app and bundled guide · Apple notarized · Free to use · No subscription · No build tools or Python required**
 
-Recommended download: `FinishInbox-Free-0.2.0-notarized-macos.zip`
+Recommended download: `FinishInbox-Free-0.2.1-English-notarized-macos.zip`
 
-[SHA-256 checksum](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256) · [Release page](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1) · [Installation and privacy](FREE-EDITION.md) · [Chinese guide](README.zh-CN.md)
+[SHA-256 checksum](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.1-free-preview.1/FinishInbox-Free-0.2.1-English-notarized-macos.zip.sha256) · [Release page](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.1-free-preview.1) · [Installation and privacy](FREE-EDITION.md)
+
+All built-in menus, prompts, tooltips, and bundled instructions are in English. Your own project and conversation names keep their original language; system dialogs follow macOS.
 
 ### Get started
 
@@ -28,7 +30,7 @@ Codex events and pending-conversation metadata are processed locally, with no up
 
 ## Historical versions — reference only
 
-**The older installers and source below are historical releases, not the current notarized Free app.** Assets marked **Historical / Not notarized** are retained for reference and are not recommended downloads. GitHub's automatically generated **Source code (zip / tar.gz)** archives contain historical open-source code, not the current Free implementation or app.
+**Version 0.2.0 has a Chinese interface and is retained for reference. The older installers and source below are historical releases, not the current notarized Free app.** Assets marked **Historical / Not notarized** are retained for reference and are not recommended downloads. GitHub's automatically generated **Source code (zip / tar.gz)** archives contain historical open-source code, not the current Free implementation or app.
 
 <details>
 <summary>Historical open-source 0.1.0: introduction and source installation</summary>

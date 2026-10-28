@@ -1,18 +1,21 @@
-# FinishInbox Free: download and installation
+# FinishInbox Free: English app, download and installation
 
-## [Download the free notarized app for macOS](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip)
+## [Download the free notarized app for macOS](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.1-free-preview.1/FinishInbox-Free-0.2.1-English-notarized-macos.zip)
 
-**Download this ZIP: `FinishInbox-Free-0.2.0-notarized-macos.zip`**
+**Download this ZIP: `FinishInbox-Free-0.2.1-English-notarized-macos.zip`**
 
-[SHA-256 checksum](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256) · [Release page](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1) · [Chinese guide](README.zh-CN.md)
+[SHA-256 checksum](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.1-free-preview.1/FinishInbox-Free-0.2.1-English-notarized-macos.zip.sha256) · [Release page](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.1-free-preview.1)
 
 | Download | Status | What to choose |
 | --- | --- | --- |
-| `FinishInbox-Free-0.2.0-notarized-macos.zip` | Recommended · Apple notarized | Download and unzip this app |
-| `FinishInbox-Free-0.2.0-notarized-macos.zip.sha256` | Checksum for the notarized app | Use it to verify the ZIP above |
+| `FinishInbox-Free-0.2.1-English-notarized-macos.zip` | Recommended · Apple notarized | Download and unzip this app |
+| `FinishInbox-Free-0.2.1-English-notarized-macos.zip.sha256` | Checksum for the notarized app | Use it to verify the ZIP above |
+| `FinishInbox-Free-0.2.0-notarized-macos.zip` | Historical Chinese interface · Apple notarized | Use the English 0.2.1 app above |
 | Older filenames containing `preview.1-macos.zip` | Historical · Not notarized | Retained for reference; not recommended |
 | `FinishInbox-v0.1.0-preview.1.zip` | Historical open-source preview · Not notarized | Not the current Free edition |
 | GitHub-generated Source code archives | Historical open-source code | Not an app download or the current Free source |
+
+All built-in app text and bundled instructions are in English. User-provided project and conversation names retain their original language. System security dialogs follow macOS.
 
 ## Installation
 

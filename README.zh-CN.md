@@ -1,3 +1,12 @@
+# Historical Chinese guide
+
+The current app is **English only**, including its menus, prompts, and bundled instructions.
+
+[Download the English notarized app](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.1-free-preview.1/FinishInbox-Free-0.2.1-English-notarized-macos.zip) · [Current English guide](README.md)
+
+<details>
+<summary>Historical Chinese documentation for version 0.2.0</summary>
+
 # FinishInbox Free
 
 [English · 默认英文首页](README.md)
@@ -183,5 +192,8 @@ swift test
 `v0.1.0-preview.1` 是技术预览版。源码、构建和发布证据都公开；没有 Developer ID 之前，不把未公证下载包包装成正式稳定版。
 
 MIT License。
+
+</details>
+
 
 </details>
