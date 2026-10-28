@@ -1,3 +1,13 @@
+> **新版免费应用下载：** [FinishInbox Free 0.2.0 预览版](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1)。无需编译或安装 Python，无订阅、无账号、无付费解锁。
+> 当前免费版仅提供编译后的应用，不公开当前实现源码，也不包含作者个人信息或运行数据。
+> [免费版使用与隐私说明](FREE-EDITION.md)。应用尚未经过 Apple 公证；请先核对下载校验和。
+
+---
+
+## 历史开源版
+
+以下保留旧版本的源码、安装说明和许可证，与上方免费发行包分开。
+
 # FinishInbox
 
 [![CI](https://github.com/jack1231222/finish-inbox/actions/workflows/ci.yml/badge.svg)](https://github.com/jack1231222/finish-inbox/actions/workflows/ci.yml)
