@@ -29,7 +29,7 @@ at the tag; they are historical source, not the Free app's implementation.
 
 ## Validation and activation
 
-Run `python3 -m unittest discover -s scripts -p 'test_release_channel.py'`.
+Run `python3 -B -m unittest discover -s scripts -p 'test_release_channel.py'`.
 Normal branch/PR CI also runs this boundary check and continues to test the
 historical source at its unchanged version.
 
