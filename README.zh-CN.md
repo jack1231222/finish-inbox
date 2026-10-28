@@ -1,5 +1,7 @@
 # FinishInbox Free
 
+[English · 默认英文首页](README.md)
+
 把 Codex 的任务完成与待回复提醒留在 macOS 菜单栏，方便你回来处理。
 
 ## [⬇ 下载免费公证版（macOS）](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip)

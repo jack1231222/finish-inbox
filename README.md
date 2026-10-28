@@ -1,37 +1,37 @@
 # FinishInbox Free
 
-把 Codex 的任务完成与待回复提醒留在 macOS 菜单栏，方便你回来处理。
+Keep completed Codex tasks and conversations awaiting your reply in the macOS menu bar.
 
-## [⬇ 下载免费公证版（macOS）](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip)
+## [Download the free notarized app for macOS](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip)
 
-**Apple 公证已通过 · 免费使用 · 无订阅 · 无需编译或安装 Python**
+**Apple notarized · Free to use · No subscription · No build tools or Python required**
 
-推荐下载的文件名：`FinishInbox-Free-0.2.0-notarized-macos.zip`。
+Recommended download: `FinishInbox-Free-0.2.0-notarized-macos.zip`
 
-[SHA-256 校验文件](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256) · [下载页与版本说明](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1) · [使用与隐私说明](FREE-EDITION.md)
+[SHA-256 checksum](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256) · [Release page](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1) · [Installation and privacy](FREE-EDITION.md) · [Chinese guide](README.zh-CN.md)
 
-### 打开即用
+### Get started
 
-1. 下载上方 ZIP 并解压，将 **FinishInbox Free.app** 拖到“应用程序”。
-2. 打开应用，选择是否启用本地 Codex 监听。
-3. 在菜单栏查看完成计数与待回复列表；从 **F✓** 菜单暂停监听或退出。
+1. Download and unzip the app, then drag **FinishInbox Free.app** into **Applications**.
+2. Open it and choose whether to enable local Codex monitoring.
+3. Check completion counts and pending replies in the menu bar. Use the **F✓** menu to pause monitoring or quit.
 
-当前为免费预览版，使用 Developer ID 签名并附有 Apple 公证票据。macOS 可能显示普通的互联网下载确认；应用不移除隔离标记、不修改系统安全设置。
+This is a free preview, signed with Developer ID and supplied with an Apple notarization ticket. macOS may show its normal internet-download confirmation. The app does not remove quarantine attributes or change security settings.
 
-包含 Apple Silicon 和 Intel 两种架构，部署目标为 macOS 13 及以上。已在 **macOS 27 / Apple Silicon** 实测下载与启动；Intel 和旧系统未作实机验证。
+The download includes Apple Silicon and Intel binaries targeting macOS 13 or later. Download and launch were tested on **macOS 27 / Apple Silicon**. Intel and older macOS versions have not been tested on hardware.
 
-### 隐私与源码
+### Privacy and source code
 
-应用在本机处理 Codex 事件与待回复对话元数据，不上传数据，无云端统计。当前免费版只提供编译后的应用，源码不公开；发布者姓名仅存在于签名证书中，不附带其他个人资料、聊天或本机配置。
+Codex events and pending-conversation metadata are processed locally, with no uploads or cloud analytics. The current Free edition is distributed as a compiled app; its source code is not public. The publisher's name appears only in the signing certificate. No other personal information, chat history, or machine configuration is bundled.
 
 ---
 
-## 历史版本：仅供查阅
+## Historical versions — reference only
 
-**旧安装包与本页下方源码均为历史版本，不是上方的免费公证版。** 下载页中标为“历史／未公证”的附件不推荐普通用户下载。GitHub 自动生成的 **Source code (zip / tar.gz)** 也是历史开源代码，不能替代当前应用包。
+**The older installers and source below are historical releases, not the current notarized Free app.** Assets marked **Historical / Not notarized** are retained for reference and are not recommended downloads. GitHub's automatically generated **Source code (zip / tar.gz)** archives contain historical open-source code, not the current Free implementation or app.
 
 <details>
-<summary>展开历史开源版 0.1.0 的介绍与源码安装方法</summary>
+<summary>Historical open-source 0.1.0: introduction and source installation</summary>
 
 # FinishInbox
 
@@ -59,7 +59,7 @@ If FinishInbox solves this problem for you, a star helps more coding-agent
 users find it. Have an integration request? [Tell me what should come
 next](https://github.com/jack1231222/finish-inbox/discussions/1).
 
-[简体中文](README.zh-CN.md)
+[Chinese](README.zh-CN.md)
 
 ## Why this exists
 
