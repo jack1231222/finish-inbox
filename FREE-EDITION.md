@@ -2,6 +2,8 @@
 
 免费的 macOS 菜单栏任务提醒工具，无订阅、无账号、无付费解锁。
 
+[下载 Apple 公证版](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip) · [SHA-256 校验文件](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256)
+
 ## 使用
 
 1. 将 `FinishInbox Free.app` 拖到“应用程序”文件夹后打开。
@@ -15,7 +17,7 @@
 
 - 包含 Apple Silicon 和 Intel 两种架构；部署目标为 macOS 13 及以上。
 - 本次自动化功能检查在 Apple Silicon / macOS 27 上通过；Intel 和旧系统未作实机验证。
-- 当前是免费预览版，使用 ad-hoc 签名，尚未经过 Apple 公证。macOS 可能阻止首次打开；请先核对下载来源与 SHA-256，再按系统“隐私与安全性”的提示自行决定。应用不会移除系统隔离标记或修改安全设置。
+- 当前免费预览版使用 Developer ID 签名，已通过 Apple 公证并附有公证票据。首次打开仍可能显示 macOS 的普通互联网下载确认；应用不移除隔离标记，也不修改系统安全设置。
 - 已在本机通过首次启用、列表反复开关、完成计数清除、暂停与恢复、回复后更新及退出的原生界面验证；当前仍以预览版发行。
 
 ## 隐私与数据
@@ -23,7 +25,7 @@
 - 应用在本机读取 Codex 的结构化完成/待回复事件，以及待回复对话的名称和项目元数据。
 - 不上传数据，无云端统计；不保存聊天正文或读取账号凭证。提醒名称在本机菜单栏显示，请留意屏幕共享。
 - 免费版数据保存在当前用户的 `~/Library/Application Support/FinishInbox Free/`，与既有本机提醒工具的数据分开。
-- 此下载只包含编译后的应用和说明，不包含作者个人信息、项目映射、聊天、数据库、运行日志或当前实现源码。
+- 此下载只包含编译后的应用和说明。发布者姓名仅存在于签名证书中；不包含其他个人资料、项目映射、聊天、数据库、运行日志或当前实现源码。
 
 ## 手动通知与项目别名（可选）
 
