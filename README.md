@@ -1,12 +1,37 @@
-> **新版免费应用下载：** [FinishInbox Free 0.2.0 预览版](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1)。无需编译或安装 Python，无订阅、无账号、无付费解锁。
-> 当前免费版仅提供编译后的应用，不公开当前实现源码或运行数据；发布者姓名仅存在于签名证书中。
-> [下载 Apple 公证版](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip) · [免费版使用与隐私说明](FREE-EDITION.md)。Developer ID 签名与公证票据已验证；请先核对下载校验和。
+# FinishInbox Free
+
+把 Codex 的任务完成与待回复提醒留在 macOS 菜单栏，方便你回来处理。
+
+## [⬇ 下载免费公证版（macOS）](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip)
+
+**Apple 公证已通过 · 免费使用 · 无订阅 · 无需编译或安装 Python**
+
+推荐下载的文件名：`FinishInbox-Free-0.2.0-notarized-macos.zip`。
+
+[SHA-256 校验文件](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256) · [下载页与版本说明](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1) · [使用与隐私说明](FREE-EDITION.md)
+
+### 打开即用
+
+1. 下载上方 ZIP 并解压，将 **FinishInbox Free.app** 拖到“应用程序”。
+2. 打开应用，选择是否启用本地 Codex 监听。
+3. 在菜单栏查看完成计数与待回复列表；从 **F✓** 菜单暂停监听或退出。
+
+当前为免费预览版，使用 Developer ID 签名并附有 Apple 公证票据。macOS 可能显示普通的互联网下载确认；应用不移除隔离标记、不修改系统安全设置。
+
+包含 Apple Silicon 和 Intel 两种架构，部署目标为 macOS 13 及以上。已在 **macOS 27 / Apple Silicon** 实测下载与启动；Intel 和旧系统未作实机验证。
+
+### 隐私与源码
+
+应用在本机处理 Codex 事件与待回复对话元数据，不上传数据，无云端统计。当前免费版只提供编译后的应用，源码不公开；发布者姓名仅存在于签名证书中，不附带其他个人资料、聊天或本机配置。
 
 ---
 
-## 历史开源版
+## 历史版本：仅供查阅
 
-以下保留旧版本的源码、安装说明和许可证，与上方免费发行包分开。
+**旧安装包与本页下方源码均为历史版本，不是上方的免费公证版。** 下载页中标为“历史／未公证”的附件不推荐普通用户下载。GitHub 自动生成的 **Source code (zip / tar.gz)** 也是历史开源代码，不能替代当前应用包。
+
+<details>
+<summary>展开历史开源版 0.1.0 的介绍与源码安装方法</summary>
 
 # FinishInbox
 
@@ -201,3 +226,5 @@ before opening a pull request. Security reports belong in the private channel
 described in [SECURITY.md](SECURITY.md), not in a public issue.
 
 MIT License.
+
+</details>

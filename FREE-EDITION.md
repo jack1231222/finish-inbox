@@ -1,8 +1,18 @@
-# FinishInbox Free 0.2.0 预览版
+# FinishInbox Free：下载与使用
 
-免费的 macOS 菜单栏任务提醒工具，无订阅、无账号、无付费解锁。
+## [⬇ 下载免费公证版（macOS）](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip)
 
-[下载 Apple 公证版](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip) · [SHA-256 校验文件](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256)
+**只需下载这个 ZIP：`FinishInbox-Free-0.2.0-notarized-macos.zip`。**
+
+[SHA-256 校验文件](https://github.com/jack1231222/finish-inbox/releases/download/v0.2.0-free-preview.1/FinishInbox-Free-0.2.0-notarized-macos.zip.sha256) · [发行页](https://github.com/jack1231222/finish-inbox/releases/tag/v0.2.0-free-preview.1)
+
+| 下载项 | 状态 | 怎么选 |
+| --- | --- | --- |
+| `FinishInbox-Free-0.2.0-notarized-macos.zip` | 当前推荐 · Apple 公证版 | 下载并解压这个文件 |
+| `FinishInbox-Free-0.2.0-notarized-macos.zip.sha256` | 公证版校验文件 | 用于核对上方 ZIP |
+| 文件名含 `preview.1-macos.zip` 的旧包 | 历史 · 未公证 | 保留查阅，不推荐下载 |
+| `FinishInbox-v0.1.0-preview.1.zip` | 历史开源版 · 未公证 | 保留查阅，不是当前免费版 |
+| GitHub 自动生成的 Source code | 历史开源代码 | 不是当前应用包，也不包含当前免费版源码 |
 
 ## 使用
 
